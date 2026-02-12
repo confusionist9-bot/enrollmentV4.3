@@ -16,32 +16,32 @@ function Dashboard() {
 
 
     useEffect(() => {
-    const fetchStudents = async () => {
-      try {
-        const res = await api.get("/students");
-        console.log(res.data);
-        setStudents(res.data);
-        setIsRateLimited(false);
-      } catch (error) {
-        console.log("Error fetching students");
-        console.log(error.response);
-        if (error.response?.status === 429) {
-          setIsRateLimited(true);
-        } else {
-          toast.error("Failed to load students");
-        }
-      } finally {
-        setLoading(false);
-      }
-    };
+        const fetchStudents = async () => {
+            try {
+                const res = await api.get("/students");
+                console.log(res.data);
+                setStudents(res.data);
+                setIsRateLimited(false);
+            } catch (error) {
+                console.log("Error fetching students");
+                console.log(error.response);
+                if (error.response?.status === 429) {
+                    setIsRateLimited(true);
+                } else {
+                    toast.error("Failed to load students");
+                }
+            } finally {
+                setLoading(false);
+            }
+        };
 
-    fetchStudents();
-  }, []);
+        fetchStudents();
+    }, []);
 
     return (
 
         <>
-            
+
 
             <button
                 onClick={() => setSidebarOpen(true)}
@@ -161,6 +161,23 @@ function Dashboard() {
 
                     </div>
 
+                    <h1 className="text-2xl font-bold">Quick Actions</h1>
+
+                    <div className="flex flex-row gap-4">
+                        <div className="flex flex-1 flex-col cursor-pointer border border-gray-200 rounded-xl bg-white justify-center items-center p-6 gap-2">
+                            <i class="fa-solid fa-plus"></i>
+                            <span className="font-xl">Create new section</span>
+                        </div>
+                        <div className="flex flex-1 flex-col cursor-pointer border border-gray-200 rounded-xl bg-white justify-center items-center p-6 gap-2">
+                            <i class="fa-solid fa-file-import"></i>
+                            <span className="font-xl">Import .csv</span>
+                        </div>
+                        <div className="flex flex-1 flex-col cursor-pointer border border-gray-200 rounded-xl bg-white justify-center items-center p-6 gap-2">
+                            <i class="fa-solid fa-file-export"></i>
+                            <span className="font-xl">Export .csv</span>
+                        </div>
+                    </div>
+
                     <div className="flex">
                         <h1 className="text-2xl font-bold">Student List</h1>
                     </div>
@@ -168,7 +185,7 @@ function Dashboard() {
                         {loading ? (
                             <div className="card y-0 text-center text-2xl font-bold bg-[#2E522A] text-white">Loading Student Records...</div>
                         ) : (
-                            <StudentsTable students={students} className="fixed-header"/>
+                            <StudentsTable students={students} className="fixed-header" />
                         )}
                     </div>
                 </section>
