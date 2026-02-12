@@ -98,7 +98,7 @@ function StudentList() {
                     <div className="flex flex-row-reverse p-4 items-center w-full h-25 bg-[url('/header.jpg')] bg-cover bg-center">
                         <img src={logo} className="w-20 h-20" />
                         <h3 className='text-lg text-white mr-2'>
-                            INSTITUTE OF INFORMATION TECHNOLOGY AND INNOVATION - STUDENT PORTAL
+                            INSTITUTE OF INFORMATION TECHNOLOGY AND INNOVATION
                         </h3>
                     </div>
                 </header>
@@ -108,7 +108,7 @@ function StudentList() {
                         <h1 className="text-2xl font-bold">Student List</h1>
                     </div>
                     <div className="flex flex-col p-10 h-auto bg-white border border-gray-300 rounded gap-4">
-                        <div className="flex gap-2">
+                        <div className="flex gap-2 flex-col md:flex-row">
                             <input
                                 type="text"
                                 inputMode="numeric"
@@ -121,7 +121,7 @@ function StudentList() {
                                         numSearch(val);
                                     }
                                 }}
-                                className="rounded border border-gray-300 p-4 w-xl"
+                                className="rounded border border-gray-300 p-4 w-full md:w-xl"
                             />
                             <SelectYearBtn />
                         </div>
@@ -145,7 +145,7 @@ function StudentList() {
                             {["All students", "Enrolled", "Irregular"].map((item) => (
                                 <label
                                     key={item}
-                                    className={`px-3.5 py-2 border rounded-md cursor-pointer mr-2 transition ${selected === item ? "bg-[#2E522A] text-white border-[#2E522A]" : "border-[#ccc] text-gray-700"}`}
+                                    className={`flex px-3.5 py-2 border rounded-md cursor-pointer text-sm md:text-xl items-center mr-2 transition ${selected === item ? "bg-[#2E522A] text-white border-[#2E522A]" : "border-[#ccc] text-gray-700"}`}
                                 >
                                     <input
                                         type="radio"

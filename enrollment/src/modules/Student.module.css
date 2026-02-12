@@ -7,7 +7,7 @@
 .customSelect {
     position: relative;
     width: 160px;
-    font-size: 14px;
+    font-size: 1.25rem;
 }
 
 .customSelect button {

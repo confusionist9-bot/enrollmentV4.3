@@ -96,7 +96,7 @@ function Dashboard() {
                     <div className="flex flex-row-reverse p-4 items-center w-full h-25 bg-[url('/header.jpg')] bg-cover bg-center">
                         <img src={logo} className="w-20 h-20" />
                         <h3 className='text-lg text-white mr-2'>
-                            INSTITUTE OF INFORMATION TECHNOLOGY AND INNOVATION - STUDENT PORTAL
+                            INSTITUTE OF INFORMATION TECHNOLOGY AND INNOVATION
                         </h3>
                     </div>
                 </header>
@@ -164,17 +164,17 @@ function Dashboard() {
                     <h1 className="text-2xl font-bold">Quick Actions</h1>
 
                     <div className="flex flex-row gap-4">
-                        <div className="flex flex-1 flex-col cursor-pointer border border-gray-200 rounded-xl bg-white justify-center items-center p-6 gap-2">
+                        <div className="flex flex-1 flex-col cursor-pointer border border-gray-200 rounded-xl bg-white justify-center items-center p-4 md:p-6 gap-2 md:gap-6">
                             <i class="fa-solid fa-plus"></i>
-                            <span className="font-xl">Create new section</span>
+                            <span className="text-sm md:text-xl">Create new section</span>
                         </div>
-                        <div className="flex flex-1 flex-col cursor-pointer border border-gray-200 rounded-xl bg-white justify-center items-center p-6 gap-2">
+                        <div className="flex flex-1 flex-col cursor-pointer border border-gray-200 rounded-xl bg-white justify-center items-center p-4 md:p-6 gap-2 md:gap-6">
                             <i class="fa-solid fa-file-import"></i>
-                            <span className="font-xl">Import .csv</span>
+                            <span className="text-sm md:text-xl">Import .csv</span>
                         </div>
-                        <div className="flex flex-1 flex-col cursor-pointer border border-gray-200 rounded-xl bg-white justify-center items-center p-6 gap-2">
+                        <div className="flex flex-1 flex-col cursor-pointer border border-gray-200 rounded-xl bg-white justify-center items-center p-4 md:p-6 gap-2 md:gap-6">
                             <i class="fa-solid fa-file-export"></i>
-                            <span className="font-xl">Export .csv</span>
+                            <span className="text-sm md:text-xl">Export .csv</span>
                         </div>
                     </div>
 

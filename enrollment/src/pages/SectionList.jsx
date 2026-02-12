@@ -62,7 +62,7 @@ function SectionList() {
                     <div className="flex flex-row-reverse p-4 items-center w-full h-25 bg-[url('/header.jpg')] bg-cover bg-center">
                         <img src={logo} className="w-20 h-20" />
                         <h3 className='text-lg text-white mr-2'>
-                            INSTITUTE OF INFORMATION TECHNOLOGY AND INNOVATION - STUDENT PORTAL
+                            INSTITUTE OF INFORMATION TECHNOLOGY AND INNOVATION
                         </h3>
                     </div>
                 </header>
@@ -74,13 +74,13 @@ function SectionList() {
 
                     <div className="flex flex-col p-8 gap-4 bg-white h-auto">
                         <div className='flex flex-row'>
-                            <input type="search" placeholder="Search" className="w-100 p-4 rounded border border-gray-400 "></input>
+                            <input type="search" placeholder="Search" className="w-xl p-4 rounded border border-gray-400 "></input>
                         </div>
                         <div className="flex">
                             {["All", "Balance", "In Progress", "Overloaded"].map((item) => (
                                 <label
                                     key={item}
-                                    className={`px-3.5 py-2 border rounded-md cursor-pointer mr-2 transition ${selected === item ? "bg-[#2E522A] text-white border-[#2E522A]" : "border-[#ccc] text-gray-700"}`}
+                                    className={`flex px-2.5 py-2 border rounded-md text-sm md:text-xl items-center cursor-pointer mr-2 transition ${selected === item ? "bg-[#2E522A] text-white border-[#2E522A]" : "border-[#ccc] text-gray-700"}`}
                                 >
                                     <input
                                         type="radio"

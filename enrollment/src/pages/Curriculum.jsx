@@ -61,7 +61,7 @@ function Curriculum() {
                     <div className="flex flex-row-reverse p-4 items-center w-full h-25 bg-[url('/header.jpg')] bg-cover bg-center">
                         <img src={logo} className="w-20 h-20" />
                         <h3 className='text-lg text-white mr-2'>
-                            INSTITUTE OF INFORMATION TECHNOLOGY AND INNOVATION - STUDENT PORTAL
+                            INSTITUTE OF INFORMATION TECHNOLOGY AND INNOVATION
                         </h3>
                     </div>
                 </header>
